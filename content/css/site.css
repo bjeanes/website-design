@@ -1,0 +1,83 @@
+---
+extension: css
+filter:    erb
+layout:    nil   # no layout
+---
+
+html, body,
+header, footer,
+article, section,
+aside, nav {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background: #fff url(/images/bgstripe.png) repeat fixed 0 0;
+}
+
+header, footer,
+article, section,
+aside, nav {
+  display: block;
+}
+
+body > header {
+  position: relative;
+  height: 150px;
+  border:1px solid transparent; /* weird webkit bug hack */
+  background: transparent url(/images/header.png) repeat-x fixed 0 0;
+}
+  body > header > * {
+    position: absolute;
+  }
+
+  body > header > h1 {
+    background: transparent url(/images/title.png) no-repeat;
+    text-indent: -9001px;
+    display: block;
+    width: 189px;
+    height: 52px;
+    left: 3em;
+    top: 0;
+  }
+  
+    body > header > h1 a {
+      display:block;
+      width:189px;
+      height:52px;
+      z-index: 100;
+    }
+  
+  body > header aside {
+    z-index: 1;
+    top: 60px;
+    left: 3em;
+    padding-left: 135px;
+    color: #606060;
+  }
+  
+    body > header aside abbr {
+      color: #262626;
+    }
+  
+  body > header nav {    
+    left: 3em;
+    top: 100px;
+  }
+
+  body > header nav ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+body > footer {
+  background: rgba(70,70,70,0.3);
+  text-align:center;
+  margin:auto;
+  margin-top:20px;
+  width: 500px;
+  border: 1px solid rgba(20,20,20,0.8);
+  padding:1em;
+}

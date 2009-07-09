@@ -1,0 +1,40 @@
+---
+extension: html
+filter:   erb
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= @page.title %></title>
+    <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+  </head>
+  <body>
+    <header>
+      <h1><a rel="index" href="/">Be Genius</a></h1>
+      <aside>code and thoughts of <abbr title="Bodaniel Jeanes">bjeanes</abbr></aside>
+      
+      <nav>
+        <ul>
+          <li>Blog</li>
+          <li>About</li>
+          <li>Projects</li>
+        </ul>
+      </nav>
+    </header>
+
+    <article>
+      <aside>
+        <time>
+          21 June 2009
+        </time>
+      </aside>
+      <section>
+        
+      </section>
+      <footer>tagged with: x, y, and z</footer>
+    </article>
+    
+    <footer>&copy; Copyright 2009 Bodaniel Jeanes. All Rights Reserved. </footer>
+  </body>
+</html>
