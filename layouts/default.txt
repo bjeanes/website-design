@@ -16,9 +16,9 @@ filter:   erb
       
       <nav>
         <ul>
-          <li>Blog</li>
-          <li>About</li>
-          <li>Projects</li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about" rel="current">About</a></li>
+          <li><a href="/projects">Projects</a></li>
         </ul>
       </nav>
     </header>
@@ -30,7 +30,7 @@ filter:   erb
         </time>
       </aside>
       <section>
-        
+        <%= @content %>
       </section>
       <footer>tagged with: x, y, and z</footer>
     </article>

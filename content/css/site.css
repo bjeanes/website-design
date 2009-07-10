@@ -7,14 +7,16 @@ layout:    nil   # no layout
 html, body,
 header, footer,
 article, section,
-aside, nav {
+aside, nav, a,
+ul, li, h1, h2, 
+h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
 
 body {
   font-family: Verdana, sans-serif;
-  background: #fff url(/images/bgstripe.png) repeat fixed 0 0;
+  background: #fff url(/images/background.png) repeat scroll 0 0;
 }
 
 header, footer,
@@ -27,7 +29,7 @@ body > header {
   position: relative;
   height: 150px;
   border:1px solid transparent; /* weird webkit bug hack */
-  background: transparent url(/images/header.png) repeat-x fixed 0 0;
+  background: transparent url(/images/header.png) repeat-x scroll 0 0;
 }
   body > header > * {
     position: absolute;
@@ -40,7 +42,7 @@ body > header {
     width: 189px;
     height: 52px;
     left: 3em;
-    top: 0;
+    top: 20px;
   }
   
     body > header > h1 a {
@@ -51,6 +53,8 @@ body > header {
     }
   
   body > header aside {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
     z-index: 1;
     top: 60px;
     left: 3em;
@@ -62,14 +66,49 @@ body > header {
       color: #262626;
     }
   
-  body > header nav {    
-    left: 3em;
-    top: 100px;
+  body > header nav { 
+    left: 6em;
+    top: 106px;
   }
 
-  body > header nav ul li {
+  body > header nav li {
     list-style: none;
     display: inline-block;
+    float:left;
+  }
+  
+  body > header nav li a {
+    margin-top: 1px;
+    position:static;
+    display:block;  
+    text-decoration: none;
+    color:#404040;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 1.5em 0 1.5em;
+    text-shadow: 0 1px 1px #D2D2D2;
+    border: 1px solid #666;
+    border-top: none;
+    margin-right:1px;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+  }
+
+  body > header nav li a:hover {
+    background-color: #999;
+  }
+  
+  body > header nav li a[rel~=current] {
+    margin-top: 0;
+    background-color: #b4b4b4;
+    background-image: url(/images/button.png);
+    background-repeat: repeat-x;
+    border: 1px solid black;
+    border-top: none;
+    height: 26px;
+    line-height: 26px;
+    color: #000;
+    text-shadow: none;
   }
   
 body > footer {
