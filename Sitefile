@@ -1,3 +1,5 @@
+SITE.create_mode = 'directory'
+
 
 task :default => :build
 
