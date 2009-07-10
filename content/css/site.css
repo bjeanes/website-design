@@ -80,8 +80,9 @@ body > header {
   }
   
   body > header nav li a {
+    z-index: 10;
     margin-top: 1px;
-    position:static;
+    position:relative;
     display:block;  
     text-decoration: none;
     color:#404040;
@@ -91,7 +92,7 @@ body > header {
     text-shadow: 0 1px 1px #D2D2D2;
     border: 1px solid #666;
     border-top: none;
-    margin-right:1px;
+    margin-right:-1px;
     -webkit-border-bottom-right-radius: 6px;
     -webkit-border-bottom-left-radius: 6px;
     -moz-border-radius-bottomleft: 6px;
@@ -100,9 +101,11 @@ body > header {
 
   body > header nav li a:hover {
     background-color: #999;
+    z-index: 50;
   }
   
   body > header nav li a[rel~=current] {
+    z-index: 100;
     margin-top: 0;
     background-color: #b4b4b4;
     background-image: url(/images/button.png);
