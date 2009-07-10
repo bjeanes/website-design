@@ -12,7 +12,7 @@ filter:   erb
   <body>
     <header>
       <h1><a rel="index" href="/">Be Genius</a></h1>
-      <aside>code and thoughts of <abbr title="Bodaniel Jeanes">bjeanes</abbr></aside>
+      <aside>code and thoughts of <b>Bodaniel Jeanes</b></aside>
       
       <nav>
         <ul>
@@ -29,6 +29,9 @@ filter:   erb
           21 June 2009
         </time>
       </aside>
+      
+      <h1>A blog post about something</h1>
+      
       <section>
         <%= @content %>
       </section>

@@ -3,7 +3,6 @@ extension: css
 filter:    erb
 layout:    nil   # no layout
 ---
-
 html, body,
 header, footer,
 article, section,
@@ -21,11 +20,11 @@ aside, nav {
 }
 
 abbr { border-bottom: none; }
+
 body {
   font-family: Verdana, sans-serif;
   background: #fff url(/images/background.png) repeat scroll 0 0;
 }
-
 
 body > header {
   position: relative;
@@ -43,7 +42,7 @@ body > header {
     display: block;
     width: 189px;
     height: 52px;
-    left: 3em;
+    left: 100px;
     top: 20px;
   }
   
@@ -64,12 +63,15 @@ body > header {
     color: #606060;
   }
   
-    body > header aside abbr {
+    body > header aside b {
+      font-weight: normal;
       color: #262626;
     }
   
-  body > header nav { 
-    left: 6em;
+  body > header nav {
+    font-family: "Lucida Grande";
+    font-size: 0.8em;
+    left: 100px;
     top: 106px;
   }
 
@@ -85,12 +87,12 @@ body > header {
     position:relative;
     display:block;  
     text-decoration: none;
-    color:#404040;
+    color:#292929;
     height: 25px;
     line-height: 25px;
     padding: 0 1.5em 0 1.5em;
     text-shadow: 0 1px 1px #D2D2D2;
-    border: 1px solid #666;
+    border: 1px solid #585858;
     border-top: none;
     margin-right:-1px;
     -webkit-border-bottom-right-radius: 6px;
@@ -118,17 +120,41 @@ body > header {
     text-shadow: none;
   }
   
+body > article {
+  position: relative;
+  text-align:justify;
+  background-color: rgba(246, 244, 243, 0.6);
+}
+
+body > article > aside {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: -71px;
+  top: -1px;
+  color: white;
+  background-color: #5c2a0d;
+}
+
+body > article > h1 {
+  color: #5c2a0d;
+}
+  
 body > article,
 body > footer {
-  margin-left:6em;
-  width: 700px;
+  font-family: "Lucida Grande";
+  margin-left:100px;
+  width: 600px;
   margin-bottom: 2em;
+  padding: 1.5em;
+  line-height:1.6em;
+  border: 1px solid #5F5F5F;
+  font-size: 85%;
+  color:#1C1C1C;
 }
   
 body > footer {
   background: rgba(70,70,70,0.3);
   text-align:center;
-  margin-top:20px;
   border: 1px solid rgba(20,20,20,0.8);
-  padding:1em;
 }
