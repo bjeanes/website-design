@@ -31,7 +31,7 @@ abbr { border-bottom: none; }
 
 body {
   font-family: Verdana, sans-serif;
-  background: #fff url(/images/background.png) repeat scroll 0 0;
+  background: #CECECE url(/images/background.png) repeat scroll 0 0;
 }
 
 body > header {

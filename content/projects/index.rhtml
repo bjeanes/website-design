@@ -8,8 +8,9 @@ filter:
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <table cellpadding="0" cellspacing="0">
-<tr>
-<th valign="top" align="right"><pre>1
+            <tbody>
+              <tr>
+                <th valign="top" align="right"><pre>1
 2
 3
 4
@@ -23,25 +24,41 @@ filter:
 12
 13
 14
-15</pre>
-</th><td valign="top">
-<pre class="sunburst"><span class="Keyword">class</span> <span class="JEntityNameType">EnkiFormatter</span>
-  <span class="Keyword">class</span> <span class="JEntityNameType"><span class="Variable"><span class="Variable">&lt;&lt;</span> self</span></span>
-    <span class="Keyword">def</span> <span class="Entity">format_as_xhtml</span>(<span class="Variable">text</span>)
-      <span class="Support">Lesstile</span>.<span class="Entity">format_as_xhtml</span>(
-        text,
-        <span class="Constant"><span class="Constant">:</span>text_formatter</span> =&gt; lambda {|<span class="Variable">text</span>| <span class="Support">RedCloth</span>.<span class="Entity">new</span>(<span class="Variable">CGI</span>::<span class="Entity">unescapeHTML</span>(text)).<span class="Entity">to_html</span>},
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></th>
+                <td valign="top"><pre class="railscasts"><span class="Source"><span class="Keyword">class</span> <span class="ClassDefinition">EnkiFormatter</span></span>
+<span class="Source">  <span class="Keyword">class</span> <span class="ClassDefinition"><span class="Variable"><span class="Variable">&lt;&lt;</span> self</span></span></span>
+    <span class="Source"><span class="Keyword">def</span> <span class="FunctionDefinition">format_as_xhtml</span><span class="Source">(</span><span class="Variable">text</span><span class="Source">)</span></span>
+      <span class="Source">Lesstile</span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">format_as_xhtml</span></span><span class="Source">(</span>
+        text<span class="Source">,</span>
+        <span class="Constant"><span class="Constant">:</span>text_formatter</span> <span class="Source">=&gt;</span> lambda <span class="Source">{</span><span class="Source">|</span><span class="Variable">text</span><span class="Source">|</span> <span class="Source">RedCloth</span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">new</span></span><span class="Source">(</span><span class="ConstantOtherVariable">CGI</span><span class="Source"><span class="Source">::</span><span class="FunctionDefinition">unescapeHTML</span></span><span class="Source">(</span>text<span class="Source">)</span><span class="Source">)</span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">to_html</span></span><span class="Source">}</span><span class="Source">,</span>
 <span class="Comment">        <span class="Comment">#</span> :code_formatter =&gt; Lesstile::CodeRayFormatter</span>
-        <span class="Constant"><span class="Constant">:</span>code_formatter</span> =&gt; lambda {|<span class="Variable">code</span>, <span class="Variable">lang</span>| 
-          t <span class="Keyword">=</span> <span class="Support">Uv</span>.<span class="Entity">parse</span>(<span class="Variable">CGI</span>::<span class="Entity">unescapeHTML</span>(code), <span class="String"><span class="String">"</span>xhtml<span class="String">"</span></span>, lang.<span class="Entity">to_s</span>.<span class="Entity">downcase</span>, <span class="Constant">false</span>, <span class="String"><span class="String">"</span>sunburst<span class="String">"</span></span>) 
-          t.<span class="Entity">gsub</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp">pre</span><span class="StringRegexp"><span class="StringRegexp">/</span></span>,<span class="String"><span class="String">'</span>code<span class="String">'</span></span>)
-        }
-      )  
+        <span class="Constant"><span class="Constant">:</span>code_formatter</span> <span class="Source">=&gt;</span> lambda <span class="Source">{</span><span class="Source">|</span><span class="Variable">code</span><span class="Source">,</span> <span class="Variable">lang</span><span class="Source">|</span> 
+          code <span class="Keyword">=</span> <span class="Source">Uv</span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">parse</span></span><span class="Source">(</span><span class="ConstantOtherVariable">CGI</span><span class="Source"><span class="Source">::</span><span class="FunctionDefinition">unescapeHTML</span></span><span class="Source">(</span>code<span class="Source">)</span><span class="Source">,</span> <span class="String"><span class="String">"</span>xhtml<span class="String">"</span></span><span class="Source">,</span> lang<span class="Source"><span class="Source">.</span><span class="FunctionDefinition">to_s</span></span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">downcase</span></span><span class="Source">,</span> <span class="ConstantBuiltIn">false</span><span class="Source">,</span> <span class="String"><span class="String">"</span>railscasts<span class="String">"</span></span><span class="Source">)</span>
+          lines <span class="Keyword">=</span> code<span class="Source"><span class="Source">.</span><span class="FunctionDefinition">split</span></span><span class="Source">(</span><span class="String"><span class="String">/</span></span><span class="String"><span class="StringInterpolation">\n</span></span><span class="String"><span class="String">/</span></span><span class="Source">)</span><span class="Source"><span class="Source">.</span><span class="FunctionDefinition">size</span></span>
+          <span class="String"><span class="String">%Q[</span>&lt;table cellpadding="0" cellspacing="0"&gt;</span>
+<span class="String">            &lt;tbody&gt;</span>
+<span class="String">              &lt;tr&gt;</span>
+<span class="String">                &lt;td valign="top" align="right"&gt;&lt;pre&gt;<span class="StringInterpolation"><span class="StringInterpolation">#{</span><span class="StringInterpolation">(</span><span class="Number">1</span><span class="StringInterpolation">.</span><span class="StringInterpolation">.</span><span class="StringInterpolation">.</span>lines<span class="StringInterpolation">)</span><span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionDefinition">to_a</span></span><span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionDefinition">join</span></span><span class="StringInterpolation">(</span><span class="String"><span class="String">"</span><span class="StringInterpolation">\n</span><span class="String">"</span></span><span class="StringInterpolation">)</span><span class="StringInterpolation">}</span></span>&lt;/pre&gt;&lt;/td&gt;</span>
+<span class="String">                &lt;td valign="top"&gt;<span class="StringInterpolation"><span class="StringInterpolation">#{</span>code<span class="StringInterpolation">}</span></span>&lt;/td&gt;</span>
+<span class="String">              &lt;/tr&gt;</span>
+<span class="String">            &lt;/tbody&gt;</span>
+<span class="String">          &lt;/table&gt;<span class="String">]</span></span>
+        <span class="Source">}</span>
+      <span class="Source">)</span>
     <span class="Keyword">end</span>
   <span class="Keyword">end</span>
 <span class="Keyword">end</span>
 </pre></td>
-</tr>
-</table>
+              </tr>
+            </tbody>
+          </table>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
