@@ -167,6 +167,11 @@ body > article {
     color: #5c2a0d;
   }
   
+  body > article blockquote {
+    border-left: 2px dotted #541B07;
+    padding-left: 1em;
+  }
+  
   body > article table {
     table-layout:fixed;
     margin-left: -52px;
