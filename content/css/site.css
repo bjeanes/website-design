@@ -175,6 +175,11 @@ body > article {
       position: relative;
   }
     
+    body > article table pre {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
     body > article table th pre {
       background-color: #2E2E2E;
       color: #B6B6B6;
@@ -185,7 +190,8 @@ body > article {
       width: 598px;
     }
     
-    body > article table td > pre {
+    body > article table td pre {
+      padding-left: 20px;
       overflow-x: auto;
     }
 
