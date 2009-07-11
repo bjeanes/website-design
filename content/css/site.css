@@ -119,9 +119,6 @@ body > header {
   body > header nav li a[rel~=current] {
     z-index: 100;
     margin-top: 0;
-/*    background-color: #b4b4b4;
-    background-image: url(/images/button.png);
-    background-repeat: repeat-x;*/
     background-color:#b8b8b8;
     border: 1px solid black;
     border-top: none;
@@ -176,8 +173,6 @@ body > article {
     table-layout:fixed;
     margin-left: -52px;
     width: 630px;
-      z-index:1000;
-      position: relative;
   }
     
     body > article table pre {
@@ -192,6 +187,13 @@ body > article {
       background-color: #2E2E2E;
       color: #B6B6B6;
       padding-right: 5px;
+      
+      -webkit-border-top-left-radius: 12px;
+      -webkit-border-bottom-left-radius: 12px;
+      -moz-border-radius-topleft: 12px;
+      -moz-border-radius-bottomleft: 12px;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
     }
     
     body > article table td {
