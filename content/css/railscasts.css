@@ -5,7 +5,7 @@ pre.railscasts .Constant {
    color: #6FAEBE;
 }
 pre.railscasts .Source {
-   background-color: #232323;
+/*   background-color: #232323;*/
    color: #FBFCFF;
 }
 pre.railscasts .line-numbers {

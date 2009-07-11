@@ -176,6 +176,9 @@ body > article {
   }
     
     body > article table pre {
+      font-family: 'Monaco';
+      font-size: 85%;
+      line-height: 1.6em;
       padding-top: 10px;
       padding-bottom: 10px;
     }
