@@ -205,6 +205,54 @@ body > article {
     background-color: #5c2a0d;
   }
   
+    /*
+      <time datetime="2009-06-21T12:00:00+01:00">
+        <a rel="bookmark" href="#">
+      		<abbr title="June">Jun</abbr> 21<sup>st</sup> <abbr>'09</abbr>
+      		<sub>12:00 pm</sub>
+      	</a>
+    */
+    
+    body > article > aside time a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      display:block;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      margin: 5px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    body > article > aside time abbr,
+    body > article > aside time sup {
+      position: absolute;
+    }
+    
+    body > article > aside time abbr{
+      top: 0;
+      font-size: 15px;
+    }
+    
+    body > article > aside time abbr:first-child {
+      left: 5px;
+    }
+    
+    body > article > aside time sup {
+      font-size: 12px;
+      top: 20px;
+    }
+    
+    body > article > aside time sup+abbr {
+      right: 5px;
+    }
+    
+    body > article > aside time sub {
+      font-size: 15px;
+    }
+      
   body > article > h1 {
     margin-bottom: 40px;
   }
