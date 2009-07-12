@@ -16,7 +16,8 @@ article, section,
 aside, nav, a,
 ul, li, h1, h2, 
 h3, h4, h5, h6,
-code, pre {
+code, pre, th, 
+td, table {
   padding: 0;
   margin: 0;
 }
@@ -170,10 +171,21 @@ body > article {
   }
   
   body > article table {
+    position: relative;
     table-layout:fixed;
     margin-left: -52px;
     width: 630px;
+    border-collapse: collapse;
   }
+  
+  
+  
+    body > article table > caption {
+      color: #2E2E2E;
+      font-size: 200%;
+      text-align: right;
+      text-shadow: 1px 0px white;
+    }
     
     body > article table pre {
       font-family: 'Monaco';
@@ -183,27 +195,38 @@ body > article {
       padding-bottom: 10px;
     }
     
+    body > article table th {
+      text-align: right;
+      width: 30px;
+    }
+    
+    body > article table th,
+    body > article table td {
+      vertical-align: top;
+      border-spacing: 0;
+    }
+    
     body > article table th pre {
-      background-color: #2E2E2E;
+      background-color: rgba(15,15,15,0.6);
       color: #B6B6B6;
       padding-right: 5px;
       
-      -webkit-border-top-left-radius: 12px;
-      -webkit-border-bottom-left-radius: 12px;
-      -moz-border-radius-topleft: 12px;
-      -moz-border-radius-bottomleft: 12px;
-      border-top-left-radius: 12px;
-      border-bottom-left-radius: 12px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
     
     body > article table td {
       width: 598px;
     }
-    
-    body > article table td pre {
-      padding-left: 20px;
-      overflow-x: auto;
-    }
+
+      body > article table td pre {
+        padding-left: 20px;
+        overflow-x: auto;
+      }
 
 body > article,
 body > footer {
