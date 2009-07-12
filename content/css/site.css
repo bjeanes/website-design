@@ -173,13 +173,11 @@ body > article {
   body > article table {
     position: relative;
     table-layout:fixed;
-    margin-left: -52px;
-    width: 630px;
+    margin-left: -51px;
+    width: 629px;
     border-collapse: collapse;
   }
-  
-  
-  
+
     body > article table > caption {
       color: #2E2E2E;
       font-size: 200%;
@@ -188,8 +186,8 @@ body > article {
     }
     
     body > article table pre {
-      font-family: 'Monaco';
-      font-size: 85%;
+      font-family: 'Menlo', 'Monaco', 'Anonymous Pro', 'Courier New', monospace;
+      font-size: 12px;
       line-height: 1.6em;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -220,12 +218,22 @@ body > article {
     }
     
     body > article table td {
-      width: 598px;
+      width: 597px;
     }
 
       body > article table td pre {
         padding-left: 20px;
         overflow-x: auto;
+      }
+      
+      body > article table td pre::selection,
+      body > article table td pre ::selection {
+        background-color: black;
+      }
+      
+      body > article table td pre::-moz-selection,
+      body > article table td pre ::-moz-selection {
+        background-color: black;
       }
 
 body > article,
