@@ -181,13 +181,6 @@ body > article {
   position: relative;
   text-align:justify;
   background-color: rgba(246, 244, 243, 0.6);
-  /* This is awesome but doesn't look good in main article text: */
-/*  -moz-column-count: 2;
-  -moz-column-gap: 1em;
-  -moz-column-rule: 1px solid #787878;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 1em;
-  -webkit-column-rule: 1px solid #787878;*/
 }
 
   body > article > aside {
@@ -199,15 +192,7 @@ body > article {
     color: white;
     background-color: #5c2a0d;
   }
-  
-    /*
-      <time datetime="2009-06-21T12:00:00+01:00">
-        <a rel="bookmark" href="#">
-      		<abbr title="June">Jun</abbr> 21<sup>st</sup> <abbr>'09</abbr>
-      		<sub>12:00 pm</sub>
-      	</a>
-    */
-    
+
     body > article > aside time a {
       position: relative;
       text-decoration: none;
@@ -265,8 +250,15 @@ body > article {
   body > article h3,
   body > article h4,
   body > article h5,
-  body > article h6 {
+  body > article h6,
+  body > article h1 a,
+  body > article h2 a,
+  body > article h3 a,
+  body > article h4 a,
+  body > article h5 a,
+  body > article h6 a {
     color: #5c2a0d;
+    text-decoration: none;
   }
   
   body > article blockquote {
